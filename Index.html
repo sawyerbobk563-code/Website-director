@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHS App Directory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top left, #eff6ff, #ffffff, #f5f3ff);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .link-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-lg w-full">
+        <!-- Main Container -->
+        <div class="glass-card rounded-[2.5rem] shadow-2xl overflow-hidden border border-white">
+            
+            <!-- Header Section -->
+            <div class="p-8 pb-4 text-center">
+                <div class="inline-flex p-3 rounded-2xl bg-blue-600 text-white mb-4 shadow-lg shadow-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900 tracking-tight">App Directory</h1>
+                <p class="text-gray-500 mt-2 font-medium">Your centralized resource hub</p>
+            </div>
+
+            <!-- Stats/IP Bar -->
+            <div class="px-8 mb-4">
+                <div class="bg-white/50 border border-gray-100 rounded-2xl p-4 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <span class="text-sm font-semibold text-gray-600">Network Status</span>
+                    </div>
+                    <div class="text-right">
+                        <span id="ip-address" class="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100">
+                            Detecting IP...
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links Grid -->
+            <div class="p-8 pt-2 grid gap-4">
+                <!-- MHS Schedule -->
+                <a href="https://sawyerbobk563-code.github.io/MHSapps/" class="link-card flex items-center p-5 rounded-3xl bg-white border border-gray-100 hover:border-blue-200 group">
+                    <div class="bg-blue-50 p-3 rounded-2xl group-hover:bg-blue-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-1">
+                        <h3 class="font-bold text-gray-900">MHS Schedule</h3>
+                        <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Schedule & Planning</p>
+                    </div>
+                    <div class="text-gray-300 group-hover:text-blue-500 group-hover:translate-x-1 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- MHS Sign-in -->
+                <a href="https://mhsappsignin.edgeone.app/" class="link-card flex items-center p-5 rounded-3xl bg-white border border-gray-100 hover:border-blue-200 group">
+                    <div class="bg-purple-50 p-3 rounded-2xl group-hover:bg-purple-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-1">
+                        <h3 class="font-bold text-gray-900">MHS Sign-in</h3>
+                        <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">EdgeOne Login</p>
+                    </div>
+                    <div class="text-gray-300 group-hover:text-purple-500 group-hover:translate-x-1 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- GPA Calculator -->
+                <a href="https://gpacal.edgeone.app/" class="link-card flex items-center p-5 rounded-3xl bg-white border border-gray-100 hover:border-blue-200 group">
+                    <div class="bg-indigo-50 p-3 rounded-2xl group-hover:bg-indigo-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-1">
+                        <h3 class="font-bold text-gray-900">GPA Calculator</h3>
+                        <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Academic Performance</p>
+                    </div>
+                    <div class="text-gray-300 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- GN Math 2 -->
+                <a href="https://github.com/sawyerbobk563-code/gn-math2.github.io" class="link-card flex items-center p-5 rounded-3xl bg-white border border-gray-100 hover:border-blue-200 group">
+                    <div class="bg-slate-50 p-3 rounded-2xl group-hover:bg-slate-800 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-1">
+                        <h3 class="font-bold text-gray-900">GN Math 2</h3>
+                        <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">GitHub Repo</p>
+                    </div>
+                    <div class="text-gray-300 group-hover:text-slate-800 group-hover:translate-x-1 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <div class="p-6 bg-gray-50/50 text-center border-t border-gray-100">
+                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">Private Directory</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchIP() {
+            const ipDisplay = document.getElementById('ip-address');
+            try {
+                // Using a 2-second timeout for the fetch
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 2000);
+                
+                const response = await fetch('https://api.ipify.org?format=json', { signal: controller.signal });
+                const data = await response.json();
+                ipDisplay.textContent = data.ip;
+                clearTimeout(timeoutId);
+            } catch (error) {
+                console.error('Error fetching IP:', error);
+                ipDisplay.textContent = 'IP Hidden or Unavailable';
+            }
+        }
+
+        window.onload = fetchIP;
+    </script>
+</body>
+</html>
